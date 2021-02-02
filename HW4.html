@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1) Напишите код, который:
+Запрашивает по очереди значения при помощи prompt и сохраняет их в массиве.
+Заканчивает ввод, как только посетитель введёт пустую строку, не число или нажмёт «Отмена».
+При этом ноль 0 не должен заканчивать ввод, это разрешённое число.
+Выводит сумму всех значений массива. -->
+
+<!-- <script>
+    let l = parseFloat(prompt("укажите длину массива")); 
+    let numb = new Array(l);
+    let sum = 0;
+    for (i=0; i<numb.length; i++) {
+        numb[i] = prompt('введите значение');
+        sum  += Number(numb[i]);
+        if(numb[i] === '') numb.length = i;
+        else if (numb[i] === null) numb.length = i;
+        // else if (numb[i] !=Number) numb.length = i; как вставить проверку не числового значения?
+        
+    }
+
+    
+alert(sum);
+</script> -->
+
+
+<!-- 2)  Напишите программу определения номер и значение минимального элемента массива, например, D={12; 0.4; 30; -2; 9.3}. Массив ввести в prompt начиная с первого номера для элемента. -->
+
+<!-- <script>
+ 
+let numb = new Array(6); 
+let min = 0;   
+let n = 0;
+    for (i=1; i<numb.length; i++) {numb[i] = parseFloat(prompt('введите значение'));
+    if (numb[i]<min) {min = numb[i]; n = i;}
+}
+    alert(`минимальное знаечение массива ${min}, порядковый номер в массиве ${n}`);
+
+</script> -->
+
+<!-- 3) 
+Вычислить:
+ 
+xi = {0.3; 5.2; 9.4; 8}, 
+уi = {43;5;3.4; 8; 20}
+
+Сумму элементов массива вычислять с помощью функции. -->
+<!-- <script>
+let x = [0.3, 5.2, 9.4, 8,];
+let y = [43, 5, 3.4, 8, 20,];
+
+function sum(s) {
+    let r = 0;
+    for (i=0; i<s.length; i++) r +=s[i]
+    return(r);
+}
+let c=(sum(x)+sum(y))/2;
+alert(c);
+</script> -->
+</body>
+</html>
