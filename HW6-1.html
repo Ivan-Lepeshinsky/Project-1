@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="mb" style="display: flex; flex-direction: row;"> 
+    </div>
+    
+    <div id="bb">
+    </div>
+
+    <script>
+        let s="";
+
+    let objPicsml = {
+        divmarding: 5,
+        width: 300,
+        height: 250,
+        fontsize: 25,
+        textalign: "center",
+                    };
+    let objPicbg = {
+        divmarding: 5,
+        width: 2500,
+        height: 2000,
+        fontsize: 25,
+        textalign: "center",
+                    };
+
+    let objcont = [
+    {f: "mir.jpg", n: "Мир", d:"В храме святого Симеона и святой Елены находится полномасштабная копия Туринской Плащаницы.", l: "https://mirzamak.by/"},
+    {f: "red.jpg", n: "Костел", d:"В храме святого Симеона и святой Елены находится полномасштабная копия Туринской Плащаницы.", l: "https://msj.by/katolicheskie-xramy/krasnyj-kostel-v-minske/ "},
+    {f: "troi.jpg", n: "Троицкое", d:"Троицкое предместье — исторический район города Минска, расположенный в северо-восточной части исторического центра на левом берегу реки Свислочь.", l: "https://www.belarus.by/ru/travel/belarus-life/trinity-suburb"},
+    ];
+
+    for (i=0; i<objcont.length; i++) s += `<div style="margin: ${objPicsml.divmarding}px;"><img src="Для галереи/im/${objcont[i].f}" alt="" style="width: ${objPicsml.width}px; height: ${objPicsml.height}px;" onclick="large(${i})"><p style="font-size: ${objPicsml.fontsize}px; text-align: ${objPicsml.textalign};">${objcont[i].n}</p></div>`
+        mb.innerHTML = s;
+
+            function large(i) {
+                    f = objcont[i].f;
+                    d = objcont[i].d;
+                    l = objcont[i].l;
+                let t =`<div><p style="font-size: ${objPicsml.fontsize}px; text-align: left;">${d}</p><a href="${l}" target="blabk">Узнать больше...</a><img src="Для галереи/im/${f}" alt="" style="width: ${objPicbg.width}px; height: ${objPicbg.height}px;" onclick="bb.innerHTML = ''"></div>`
+            
+                bb.innerHTML = t;
+            };
+
+
+    </script>
+</body>
+</html>
