@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<style>
+    section {
+        width: 550px;
+        height: 400px;
+        margin: 0 auto;
+        transition: .3s;
+    }
+
+    section:hover {
+        filter: brightness(80%);
+    }
+    div {
+        position: relative;
+        width: 70px;
+        }
+
+    .material-icons {
+         font-size: 70px;
+         color: white;
+     }       
+    .material-icons:hover {
+        transition: 1s; color: aqua;
+     }       
+     #prev {
+         top: -250px
+     }
+     #next {
+         top: -327px;
+         left:475px
+     }
+    #title {
+        position: relative;
+        top: -324px;
+        width: 550px;
+        height: 100px;
+        background-color:rgba(44, 45, 46, 0.589);
+        color: white;
+               
+     }
+     #title a {
+         text-decoration: none;
+         color: white;
+     }
+     #title a:hover {
+        color: black;
+     }
+     #link {
+        position: relative;
+        top: -400px; 
+        margin-left: 10px;
+        color: white;
+        border: 1px solid white;
+        width: fit-content;
+     }
+</style>
+
+</head>
+<body>
+    
+<section id="sec" onmouseout="timerid = setTimeout(changePic, 2000)">
+    
+    <a href="https://www.belarus.by/ru/about-belarus/geography/minskcity" id="h1"><img src="../images/img1b.jpg" alt="" id="pic"></a> 
+    <p id="link">https://www.belarus.by/ru/about-belarus/geography/minskcity</p> 
+
+    <div id="prev">
+        <a href="javascript:bc()">
+            <span class="material-icons">navigate_before</span>
+        </a>
+    </div>
+
+    <div id="next">
+        <a href="javascript:fr()">
+            <span class="material-icons">navigate_next</span>
+        </a>
+    </div>
+
+    <div id="title">
+        <h2 id="header">заголовок слайда 1</h2>
+        <a href="https://www.belarus.by/ru/about-belarus/geography/minskcity" id="h2"><p id="p1">Описательная часть слайда 1 с сылкой</p></a>
+    </div>
+
+
+</section>
+
+<script>
+let n=1, p=6, l="";
+        to = ['https://www.belarus.by/ru/about-belarus/geography/minskcity', 'https://airport.by/','https://sov.minsk.gov.by/poleznye-ssylki','http://minsksport.by/ispolcomu','http://www.minsk-smp.by/informatsiya/ssylki','http://sch209.minsk.edu.by/ru/main.aspx?guid=3481'];
+
+        function fr() {
+            if (n>=p) n=1
+            else n++;
+            pic.src=`../images/img${n}b.jpg`;
+            header.innerHTML = `заголовок слайда ${n}`;
+            h1.href=to[n-1];
+            h2.href=to[n-1];
+            l = to[n-1];
+            link.innerHTML = l.substr(8);
+            p1.innerHTML = `<p>Описательная часть слайда ${n} с сылкой</p></a>`;
+                        };
+
+        function bc() {
+            if (n==1) n=6
+            else n--;
+            pic.src=`../images/img${n}b.jpg`;
+            header.innerHTML = `заголовок слайда ${n}`;
+            h1.href=to[n-1];
+            h2.href=to[n-1];
+            l = to[n-1];
+            link.innerHTML = l.substr(8);
+            p1.innerHTML = `<p>Описательная часть слайда ${n} с сылкой</p></a>`;
+                        };
+
+        function changePic() {
+            if (n>p) n=1;
+            pic.src=`../images/img${n}b.jpg`;
+            h1.href=to[n-1];
+            header.innerHTML = `заголовок слайда ${n}`;
+            h2.href=to[n-1];
+            p1.innerHTML = `<p>Описательная часть слайда ${n} с сылкой</p></a>`;
+            l = to[n-1];
+            link.innerHTML = l.replace('http://','https://').substr(8);
+            n++;
+            timerid = setTimeout(changePic, 2000);
+                            };
+
+        function stop() {
+            clearTimeout(timerid);
+                        };
+
+        addEventListener("load", changePic);
+        sec.addEventListener('mouseover', stop);
+        
+
+</script>
+
+</body>
+</html>
