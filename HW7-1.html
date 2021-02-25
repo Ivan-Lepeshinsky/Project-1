@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onclick="eve(event)">
+    <img src="../images/world.gif" alt="">
+
+    <script>
+        // function eve(e) {
+        //     let s ="";
+        //     s = `тип события: ${e.type}\n`;
+        //     s += `Источник события: ${e.srcElement.tagName}\n`;
+        //     s += `Координата X: ${e.clientX}; Координата Y: ${e.clientY}`;
+
+        //     alert(s);
+        // }
+
+        function eve(e) {
+            let s = `${e.pageX} ${e.pageY}`;
+            if (e.pageX>610 && e.pageX<620 && e.pageY>245 && e.pageY<255) {window.open("NY.html", null, 'width=700,height=600')}
+            else if (e.pageX>980 && e.pageX<990 && e.pageY>180 && e.pageY<190) {alert("Lnd")}
+            else if (e.pageX>1700 && e.pageX<1710 && e.pageY>275 && e.pageY<285) {alert("Tk")}
+        };
+    </script>
+
+</body>
+</html>
