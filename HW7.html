@@ -1,43 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-<!--  Удалить таблицу поэтапно: содержимое ячеек, сами ячейки, строки, таблицу по таймеру через 2 сек. каждая итерация. -->
+  </head>
+  <body>
+    <!--  Удалить таблицу поэтапно: содержимое ячеек, сами ячейки, строки, таблицу по таймеру через 2 сек. каждая итерация. -->
 
-<script>
-let row = parseFloat(prompt("укажите число столбцов"));
-let line = parseFloat(prompt("укажите число рядов"));
-let cont = prompt('укажите сожержимое');
-let table = document.createElement('table');
-table.style.cssText = `border: 1px solid red;`;
-table.setAttribute('id', 'table') 
+    <script>
+      let row = parseFloat(prompt("укажите число столбцов"));
+      let line = parseFloat(prompt("укажите число рядов"));
+      let cont = prompt("укажите сожержимое");
+      let table = document.createElement("table");
+      table.style.cssText = `border: 1px solid red;`;
+      table.setAttribute("id", "table");
 
-for (i=0; i<line; i++) {
-   let tline = document.createElement('tr');
-   table.append(tline);
-      for (j=0; j<row; j++) {
-        cell = document.createElement('td');
-        cell.setAttribute('bgcolor', 'blue')
-        cell.setAttribute('class', 'td') 
-        cell.innerHTML = cont;
-        tline.append(cell);
-    }
-};
+      for (i = 0; i < line; i++) {
+        let tline = document.createElement("tr");
+        table.append(tline);
+        for (j = 0; j < row; j++) {
+          cell = document.createElement("td");
+          cell.setAttribute("bgcolor", "blue");
+          cell.setAttribute("class", "td");
+          cell.innerHTML = cont;
+          tline.append(cell);
+        }
+      }
 
+      document.body.append(table);
 
-document.body.append(table);
+      setTimeout(function () {
+        menu = document.querySelectorAll("table > tr> td");
+        menu.forEach(function (item, i, menu) {
+          item.innerHTML = "";
+        });
+      }, 2000);
 
-// setTimeout(function clear() {table.innerHTML = '';}, 8000); работает
+      setTimeout(function () {
+        menu = document.querySelectorAll("table > tr");
+        menu.forEach(function (item, i, menu) {
+          item.innerHTML = "";
+        });
+      }, 4000);
 
-</script>
-
-
-
-</body>
+      setTimeout(function () {
+        menu = document.querySelectorAll("table");
+        menu.forEach(function (item, i, menu) {
+          item.innerHTML = "";
+        });
+      }, 6000);
+      setTimeout(function () {
+        menu = document.querySelectorAll("body");
+        menu.forEach(function (item, i, menu) {
+          item.innerHTML = "";
+        });
+      }, 8000);
+    </script>
+  </body>
 </html>
