@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="jsaudio.js"></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
+
+      #player {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      #name {
+        border: 1px solid black;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: grey;
+        border: 1px solid black;
+        opacity: 0.7;
+      }
+
+      #buttons {
+        display: flex;
+        justify-content: space-around;
+        color: rgba(0, 0, 0, 0.993);
+      }
+      #bar {
+        width: 100px;
+        height: 7px;
+        padding: 2px;
+        margin: 2px 5px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+
+      #progress {
+        width: 0;
+        height: 7px;
+        background: #00adef;
+        border-radius: 10px;
+      }
+      #listname,
+      #playlist {
+        border: 1px solid black;
+        height: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="player">
+      <div id="fname">Сейчас проигрывается:</div>
+      <audio src="../media/atb.mp3" id="song"></audio>
+      <!-- <audio src="" id="song" ></audio> -->
+      <nav>
+        <div id="buttons">
+          <span class="material-icons" id="prev"> skip_previous </span>
+          <span class="material-icons" id="play"> play_arrow </span>
+          <span class="material-icons" id="next"> skip_next </span>
+        </div>
+        <div id="bar">
+          <div id="progress"></div>
+        </div>
+        <div id="control">
+          <input
+            type="range"
+            id="volume"
+            min="0"
+            max="1"
+            step=".1"
+            value=".6"
+          />
+        </div>
+      </nav>
+      <div id="listname">Список Воспроизведения:</div>
+      <div id="playlist">Перетяните сюда файлы</div>
+    </div>
+  </body>
+</html>
