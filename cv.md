@@ -28,6 +28,9 @@
 
 ## Code samples:
 
+- [GitHub](https://github.com/Ivan-Lepeshinsky)
+- [Codewars:](https://www.codewars.com/users/Ivan%20Lepiashynski)
+
 ---
 
 ## Job experience:
