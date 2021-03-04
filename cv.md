@@ -8,7 +8,7 @@
 
 - tel: +375-29-76-500-96
 - e-mail: clo-by@mail.ru
-- LinkedIn: [LEPESHINSKY IVAN] (https://www.linkedin.com/in/%D0%B8%D0%B2%D0%B0%D0%BD-%D0%BB%D0%B5%D0%BF%D0%B5%D1%88%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9-43926a206/)
+- LinkedIn: [LEPESHINSKY IVAN](https://www.linkedin.com/in/%D0%B8%D0%B2%D0%B0%D0%BD-%D0%BB%D0%B5%D0%BF%D0%B5%D1%88%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9-43926a206/)
 
 ---
 
